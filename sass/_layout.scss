@@ -1,0 +1,348 @@
+.navbar {
+  background-color: var(--color-primary);
+  color: var(--color-white-text);
+  height: 9rem;
+
+  @media only screen and (max-width: 500px) {
+    height: 20rem;
+    text-align: center;
+  }
+
+  &__container {
+    @include container;
+    justify-content: space-between;
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media only screen and (max-width: 500px) {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+  }
+
+  &__items {
+    display: flex;
+    margin-top: 2rem;
+    @media only screen and (max-width: 500px) {
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+  &__item {
+    color: var(--color-white-text);
+    margin-right: 5rem;
+
+    &:hover {
+      border-bottom: 2px var(--color-white-text) solid;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+}
+
+.showcase {
+  background-color: var(--color-primary);
+  color: var(--color-white-text);
+  position: relative;
+  height: 40rem;
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+  }
+
+  &__container {
+    @include container;
+    flex-direction: column;
+  }
+
+  &__grid {
+    @include grid(35% 65%, 3rem);
+
+    @media only screen and (max-width: 768px) {
+      @include grid(1fr, 3rem);
+
+    }
+  }
+
+  &__text {
+    height: 45rem;
+    animation: slideInFromRight 1s ease-in;
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+      animation: slideInFromBottom 1s ease-in;
+
+    }
+  }
+
+  &__form {
+    position: relative;
+    height: 44rem;
+    padding: 4em;
+    width: 80%;
+    justify-self: flex-end;
+    animation: slideInFromLeft 1s ease-in;
+
+    @media only screen and (max-width: 768px) {
+      justify-self: center;
+      margin: auto;
+      height: 30rem;
+      animation: slideInFromTop 1s ease-in;
+
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      border: 0;
+      border-bottom: 0.3rem solid var(--color-secondary-2);
+      width: 100%;
+      padding: 0.3rem;
+
+      &::-webkit-input-placeholder {
+        font-size: 1.3rem;
+      }
+    }
+
+  }
+
+  &__form-control {
+    margin: 3rem 0;
+  }
+
+
+  &__paragraph {
+    margin: 20px 0;
+  }
+
+}
+
+
+.showcase::before, .showcase::after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  height: 11rem;
+  bottom: -8.2rem;
+  left: 0;
+  right: 0;
+  background: #fff;
+  transform: skewY(-5deg);
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+}
+
+
+.stats {
+  animation: slideInFromBottom 1s ease-in;
+  &__container {
+    @include container;
+    flex-direction: column;
+  }
+
+  &__grid {
+    @include grid(33% 33% 33%, 1fr);
+
+    @media only screen and (max-width: 768px) {
+      @include grid(1fr, 1fr);
+    }
+  }
+}
+
+
+.cloud {
+  &__container {
+    @include container;
+  }
+
+  &__grid {
+    @include grid(4fr 3fr, 1fr);
+
+    @media only screen and (max-width: 768px) {
+      @include grid(1fr, 1fr);
+    }
+  }
+
+}
+
+
+.languages {
+  &__container {
+    @include container;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    text-align: center;
+    transition: transform 0.2s ease-in;
+  }
+
+  .card:hover {
+    cursor: pointer;
+    transform: translateY(-1.5rem);
+
+  }
+
+}
+
+.footer {
+  background-color: var(--color-primary-2);
+  color: var(--color-white-text);
+
+
+  &__container {
+    @include container;
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (max-width: 580px) {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      nav {
+        margin: 3rem 0;
+      }
+
+    }
+  }
+
+  &__social {
+    a {
+      margin: 0 1rem;
+    }
+  }
+
+}
+
+.features {
+  background-color: var(--color-primary-2);
+  color: var(--color-white-text);
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+
+
+  &__container {
+    @include container;
+
+
+  }
+
+  &__grid {
+
+    width: 100%;
+    @include grid(4fr 3fr, 1rem);
+
+    @media only screen and (max-width: 768px) {
+      @include grid(1fr, 1fr);
+    }
+  }
+
+  &__image {
+    width: 20rem;
+    justify-self: flex-end;
+    @media only screen and (max-width: 768px) {
+      justify-self: center;
+    }
+  }
+
+
+}
+
+.docs {
+  margin-top: 10rem;
+  color: var(--color-secondary-text);
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 5rem;
+
+  }
+
+  &__container {
+    @include container;
+    @media only screen and (max-width: 950px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+
+  &__grid {
+    width: 100%;
+    @include grid(3fr 5fr, 0);
+    @media only screen and (max-width: 950px) {
+      @include grid(1fr, 1fr);
+    }
+  }
+
+  a {
+    color: var(--color-primary-text);
+  }
+
+  .card {
+    background-color: lightgray;
+    color: var(--color-primary-text);
+    width: 40rem;
+    text-align: left;
+
+    @media only screen and (max-width: 950px) {
+      margin: 1rem auto;
+    }
+    @media only screen and (max-width: 510px) {
+      width: 30rem;
+    }
+    @media only screen and (max-width: 410px) {
+      width: 20rem;
+
+    }
+
+
+    h3 {
+      margin-left: 2rem;
+      font-size: 2rem;
+      border-bottom: 3px solid #fff;
+
+      @media only screen and (max-width: 510px) {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+
+      }
+    }
+
+    nav {
+      margin-left: 8rem;
+      @media only screen and (max-width: 510px) {
+        margin-left: 0;
+        text-align: center;
+      }
+
+
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+}
+

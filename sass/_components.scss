@@ -1,0 +1,45 @@
+
+.button {
+  display: inline-block;
+  padding: 2rem 5rem;
+  cursor: pointer;
+  background: var(--color-primary-2);
+  color: var(--color-white-text);
+  border: none;
+  border-radius: 2.5rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: bold;
+  user-select: none;
+  letter-spacing: .1rem;
+
+
+  &--outline {
+    background-color: transparent;
+    border: 0.1rem #fff solid;
+  }
+
+  &--rectangle{
+    border-radius: 1rem;
+    padding: 1.5rem 4rem;
+
+  }
+}
+
+.button:hover {
+  -webkit-transform: scale(.98);
+  -moz-transform: scale(.98);
+  -o-transform: scale(.98);
+  transform: scale(.98);
+}
+
+.card {
+  color: var(--color-primary-text);
+  background-color: var(--color-white-text);
+  border-radius: 1rem;
+  box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin: 1rem;
+  z-index: 999;
+  text-align: center;
+}
